@@ -3,35 +3,43 @@
 import sys
 
 def isPalindrome(myText):
-    array1 = []
     text1 = ""
     text2 = ""
     string_length = len(myText)
 
 
     if (string_length%2 == 0):
-        print ("Even")
+        #print ("Even")
         for i in range(0,int(string_length/2)):
             text1 = myText[i] + text1
-        print("Text1: " + text1)
-
         text2 = myText[int(string_length/2): int(string_length+1)]
-        print ("Text2: " + text2)
+
+        #print("Text1: " + text1)
+        #print ("Text2: " + text2)
+
+        if (text1 == text2):
+            return True
+        else:
+            return False
+
     else:
-        print("Odd")
+        #print("Odd")
         for i in range(0, int( (string_length - 1) / 2)):
             text1 = myText[i] + text1
-        print("Text1: " + text1)
-
         text2 = myText[int(string_length/2)+1: int(string_length+1)]
-        print ("Text2: " + text2)
 
-isPalindrome(sys.argv[1])
+        #print("Text1: " + text1)
+        #print ("Text2: " + text2)
 
-'''
-if len(sys.argv) < 2:
-    print("Please provide a year as an argument")
+        if (text1 == text2):
+            return True
+        else:
+            return False
+
+
+
+
+if len(sys.argv) != 2:
+    print("Please provide just 1 argument")
 else:
-    value = sys.argv[1]
-    print(isPalindrome(value))
-'''
+    print(isPalindrome(sys.argv[1]))
