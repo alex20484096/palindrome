@@ -1,7 +1,3 @@
-#!/usr/local/bin/python3
-
-import sys
-
 def isPalindrome(myText):
     text1 = ""
     text2 = ""
@@ -35,11 +31,3 @@ def isPalindrome(myText):
             return True
         else:
             return False
-
-
-
-
-if len(sys.argv) != 2:
-    print("Please provide just 1 argument")
-else:
-    print(isPalindrome(sys.argv[1]))
